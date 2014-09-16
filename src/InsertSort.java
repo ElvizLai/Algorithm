@@ -24,7 +24,7 @@ public class InsertSort {
             }
         }
 
-        System.out.println("时间：" + (System.currentTimeMillis() - begin));
+        System.out.println("InsertSort:" + (System.currentTimeMillis() - begin)+" ms");
         return temp;
     }
 
@@ -33,49 +33,4 @@ public class InsertSort {
         data[a] = data[b];
         data[b] = t;
     }
-
-
-//    public static int[] mergeSorting(int[] input) {
-//        if (input.length <= 1)
-//            return input;
-//
-//        int divid = input.length / 2;
-//
-//        int[] tempL = Arrays.copyOf(input, divid);
-//        int[] tempR = Arrays.copyOfRange(input, divid, input.length);
-//
-//        tempL = sort(tempL);
-//        tempR = sort(tempR);
-//
-//        return merge(tempL, tempR);
-//    }
-
-//    //有序数列的合并
-//    private static int[] merge(int[] tempL, int[] tempR) {
-//        int[] result = new int[tempL.length + tempR.length];
-//
-//        int i, j, k;
-//        i = j = k = 0;
-//
-//        while (i < tempL.length && j < tempR.length) {
-//            if (tempL[i] <= tempR[j]) {
-//                result[k++] = tempL[i++];
-//            } else {
-//                result[k++] = tempR[j++];
-//            }
-//        }
-//
-//        while (i < tempL.length) {
-//            result[k++] = tempL[i++];
-//        }
-//
-//        while (j < tempR.length) {
-//            result[k++] = tempR[j++];
-//        }
-//
-//        System.out.println(Arrays.toString(result));
-//
-//        return result;
-//
-//    }
 }
