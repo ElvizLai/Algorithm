@@ -18,10 +18,12 @@ public class MergeSort {
 
     private static void mergearray(int[] a, int start, int middle, int end, int[] temp) {
 
+        //i as the begin of array1
         int i = start, j = middle + 1;
 
         int index = 0;
 
+        //merge
         while (i <= middle && j <= end) {
             if (a[i] <= a[j])
                 temp[index++] = a[i++];
@@ -35,6 +37,8 @@ public class MergeSort {
         while (j <= end)
             temp[index++] = a[j++];
 
+
+        //
         for (i = 0; i < index; i++)
             a[start + i] = temp[i];
     }
